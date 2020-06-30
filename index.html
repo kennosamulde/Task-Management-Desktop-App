@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="quick-add">
+    <div class="quick-add__bg"></div>
+    <div class="quick-add__modal" data-modal-container>
+      <div class="quick-add__modal__head">
+        <h3 class="heading-3">Quick Add Task</h3>
+        <button class="btn btn--icon close-quick-add">
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 18.25 18.25">
+            <path id="Icon_ionic-md-close" data-name="Icon ionic-md-close" d="M25.774,9.348,23.949,7.523l-7.3,7.3-7.3-7.3L7.523,9.348l7.3,7.3-7.3,7.3,1.825,1.825,7.3-7.3,7.3,7.3,1.825-1.825-7.3-7.3Z" transform="translate(-7.523 -7.523)" fill="#8385a1"/>
+          </svg>
+        </button>
+      </div>
+      <form class="quick-add__modal__form" data-modal-form>
+        <input type="text" placeholder="e.g. Kill Kinken" class="heading-3" data-modal-input>
+        <button class="btn btn--light schedule">Schedule</button>
+        <button class="btn btn--primary add-task">Add Task</button>
+      </form>
+      <div class="quick-add__modal__controls">
+        <div class="quick-add__modal__popper">
+          <div class="quick-add__modal__popper__item">
+            <button class="btn btn--icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18.153" height="15.748" viewBox="0 0 18.153 15.748">
+                <path id="Icon_ionic-md-folder-open" data-name="Icon ionic-md-folder-open" d="M18.674,9.112H11.327L9.6,6.75H3.979A1.947,1.947,0,0,0,2.25,8.85V20.4a1.947,1.947,0,0,0,1.729,2.1h14.7A1.947,1.947,0,0,0,20.4,20.4V11.212A1.947,1.947,0,0,0,18.674,9.112ZM19.106,20.4a.492.492,0,0,1-.432.525H3.979a.492.492,0,0,1-.432-.525V10.687H18.674a.492.492,0,0,1,.432.525Z" transform="translate(-2.25 -6.75)" fill="#8385a1"/>
+              </svg>                            
+            </button>
+            <div>
+              <span class="arrow"></span>
+              <input type="text" placeholder="Type a Folder" class="heading-4 input-search" autofocus="autofocus">
+              <ul data-modal-list id="modalCategory"></ul>
+              <form action="" class="popper__item__form" data-modal-category-form>
+                <button class="btn btn--icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
+                    <g id="Group_57" data-name="Group 57" transform="translate(-47 -557)">
+                      <rect id="Rectangle_9" data-name="Rectangle 9" width="22" height="22" rx="11" transform="translate(47 557)" fill="#e5f8fc"/>
+                      <path id="Icon_ionic-ios-add" data-name="Icon ionic-ios-add" d="M19.04,13.668H15.006V9.634a.669.669,0,1,0-1.338,0v4.034H9.634a.669.669,0,0,0,0,1.338h4.034V19.04a.669.669,0,0,0,1.338,0V15.006H19.04a.669.669,0,1,0,0-1.338Z" transform="translate(43.688 553.663)" fill="#484df9"/>
+                    </g>
+                  </svg>
+                </button>
+                <input type="text" placeholder="Add new" class="heading-4 input-form" data-modal-category-input>
+              </form>
+            </div>
+          </div>
+          <div class="quick-add__modal__popper__item">
+            <button class="btn btn--icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20.084" height="15.9" viewBox="0 0 20.084 15.9">
+                <g id="Icon_ionic-ios-list" data-name="Icon ionic-ios-list" transform="translate(-4.5 -7.313)">
+                  <path id="Path_81" data-name="Path 81" d="M7.429,17.5a1.464,1.464,0,1,1-1.464-1.464A1.464,1.464,0,0,1,7.429,17.5Z" transform="translate(0 -2.233)" fill="#8385a1"/>
+                  <path id="Path_82" data-name="Path 82" d="M7.429,8.777A1.464,1.464,0,1,1,5.964,7.313,1.464,1.464,0,0,1,7.429,8.777Z" fill="#8385a1"/>
+                  <path id="Path_83" data-name="Path 83" d="M7.429,26.214A1.464,1.464,0,1,1,5.964,24.75a1.464,1.464,0,0,1,1.464,1.464Z" transform="translate(0 -4.466)" fill="#8385a1"/>
+                  <path id="Path_84" data-name="Path 84" d="M25.756,16.875H13.177a.837.837,0,1,0,0,1.674H25.756a.837.837,0,0,0,0-1.674Z" transform="translate(-2.008 -2.449)" fill="#8385a1"/>
+                  <path id="Path_85" data-name="Path 85" d="M25.756,25.594H13.177a.837.837,0,1,0,0,1.674H25.756a.837.837,0,0,0,0-1.674Z" transform="translate(-2.008 -4.682)" fill="#8385a1"/>
+                  <path id="Path_86" data-name="Path 86" d="M13.177,9.83H25.756a.837.837,0,0,0,0-1.674H13.177a.837.837,0,1,0,0,1.674Z" transform="translate(-2.008 -0.216)" fill="#8385a1"/>
+                </g>
+              </svg>                           
+            </button>
+            <div>
+              <span class="arrow"></span>
+              <input type="text" placeholder="Type a List" class="heading-4 input-search" autofocus="autofocus">
+              <ul data-modal-list id="modalList"></ul>
+              <form action="" data-modal-list-form>
+                <button class="btn btn--icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
+                    <g id="Group_57" data-name="Group 57" transform="translate(-47 -557)">
+                      <rect id="Rectangle_9" data-name="Rectangle 9" width="22" height="22" rx="11" transform="translate(47 557)" fill="#e5f8fc"/>
+                      <path id="Icon_ionic-ios-add" data-name="Icon ionic-ios-add" d="M19.04,13.668H15.006V9.634a.669.669,0,1,0-1.338,0v4.034H9.634a.669.669,0,0,0,0,1.338h4.034V19.04a.669.669,0,0,0,1.338,0V15.006H19.04a.669.669,0,1,0,0-1.338Z" transform="translate(43.688 553.663)" fill="#484df9"/>
+                    </g>
+                  </svg>
+                </button>
+                <input type="text" placeholder="Add new" class="heading-4 input-form" data-modal-list-input>
+              </form>
+            </div>
+          </div>
+          <div class="quick-add__modal__popper__item modal-important" data-modal-important>
+            <button class="btn btn--icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16.689" height="15.969" viewBox="0 0 16.689 15.969">
+                <path id="Icon_feather-star" data-name="Icon feather-star" d="M10.344,3l2.269,4.6,5.075.742-3.672,3.577.867,5.053-4.539-2.387L5.806,16.969l.867-5.053L3,8.339,8.075,7.6Z" transform="translate(-2 -2)" fill="none" stroke="#8385a1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+              </svg>
+            </button>
+            <div class="important">
+              <h4 class="heading-5">Make important</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <aside>
+      <div class="user">
+        <div class="user__profile">
+          <button class="user__profile__icon btn btn--icon"><svg xmlns="http://www.w3.org/2000/svg" width="21.09" height="18" viewBox="0 0 21.09 21.096">
+            <path id="Icon_ionic-ios-settings" data-name="Icon ionic-ios-settings" d="M23.849,15.045a2.714,2.714,0,0,1,1.741-2.532,10.757,10.757,0,0,0-1.3-3.136,2.75,2.75,0,0,1-1.1.236A2.708,2.708,0,0,1,20.708,5.8a10.725,10.725,0,0,0-3.131-1.3,2.712,2.712,0,0,1-5.064,0A10.757,10.757,0,0,0,9.377,5.8,2.708,2.708,0,0,1,6.9,9.613a2.661,2.661,0,0,1-1.1-.236,11,11,0,0,0-1.3,3.142,2.713,2.713,0,0,1,.005,5.064,10.757,10.757,0,0,0,1.3,3.136,2.709,2.709,0,0,1,3.575,3.575,10.82,10.82,0,0,0,3.136,1.3,2.707,2.707,0,0,1,5.053,0,10.757,10.757,0,0,0,3.136-1.3,2.712,2.712,0,0,1,3.575-3.575,10.82,10.82,0,0,0,1.3-3.136A2.727,2.727,0,0,1,23.849,15.045Zm-8.755,4.388a4.394,4.394,0,1,1,4.394-4.394A4.393,4.393,0,0,1,15.095,19.433Z" transform="translate(-4.5 -4.5)" fill="#8385a1"/>
+          </svg>
+          </button>
+          <div class="user__profile__image">
+            <img src="icons/screen-0.jpg" alt="">
+          </div>
+          <button class="user__profile__icon btn btn--icon"><svg xmlns="http://www.w3.org/2000/svg" width="16.796" height="21.007" viewBox="0 0 16.796 21.007">
+            <g id="Icon_ionic-ios-notifications" data-name="Icon ionic-ios-notifications" transform="translate(-6.761 -3.93)">
+              <path id="Path_40" data-name="Path 40" d="M17.135,31.119a2.475,2.475,0,0,0,2.525-2.783H14.6A2.476,2.476,0,0,0,17.135,31.119Z" transform="translate(-1.986 -6.181)" fill="#8385a1"/>
+              <path id="Path_41" data-name="Path 41" d="M23.344,19.487c-.809-1.066-2.4-1.691-2.4-6.463,0-4.9-2.163-6.868-4.179-7.34-.189-.047-.326-.11-.326-.31V5.222a1.281,1.281,0,1,0-2.562,0v.152c0,.194-.137.263-.326.31-2.021.478-4.179,2.441-4.179,7.34,0,4.773-1.591,5.392-2.4,6.463a1.042,1.042,0,0,0,.835,1.67H22.514A1.042,1.042,0,0,0,23.344,19.487Z" transform="translate(0 0)" fill="#8385a1"/>
+            </g>
+          </svg>
+          </button>
+        </div>
+        <h3 class="heading-3">Hi, Allana Santos</h3>
+        <button class="btn btn--light user__button"><svg xmlns="http://www.w3.org/2000/svg" width="27.313" height="26.461" viewBox="0 0 27.313 26.461">
+          <g id="Icon_ionic-md-rocket" data-name="Icon ionic-md-rocket" transform="translate(12.892 -6.761) rotate(50)">
+            <path id="Path_36" data-name="Path 36" d="M17.186,29.468a5.942,5.942,0,0,1-2.367-.6.429.429,0,0,0-.6.419L14.41,32.1a.216.216,0,0,0,.348.155l.8-.607a.218.218,0,0,1,.315.055L17,33.475a.217.217,0,0,0,.364,0L18.5,31.7a.218.218,0,0,1,.315-.055l.8.607a.216.216,0,0,0,.348-.155l.193-2.814a.427.427,0,0,0-.6-.419A5.968,5.968,0,0,1,17.186,29.468Z" transform="translate(-1.363 -5.96)" fill="#484df9"/>
+            <path id="Path_37" data-name="Path 37" d="M23.643,16.417l-2.649-2.71c0-8.719-5.143-12.582-5.143-12.582s-5.193,3.863-5.193,12.582l-2.649,2.71a.459.459,0,0,0-.121.392L8.9,22.978a.422.422,0,0,0,.651.3l3.7-2.505a4.213,4.213,0,0,0,2.6,1.1,3.984,3.984,0,0,0,2.544-1.1l3.7,2.505a.424.424,0,0,0,.651-.3L23.775,16.8A.49.49,0,0,0,23.643,16.417Zm-7.792-5.579a1.767,1.767,0,1,1,1.694-1.766A1.729,1.729,0,0,1,15.851,10.838Z" transform="translate(0)" fill="#484df9"/>
+          </g>
+        </svg>
+        Upgrade</button>
+      </div>
+      <nav class="nav">
+        <li>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16.488" height="18.098" viewBox="0 0 16.488 18.098">
+            <g id="Icon_feather-calendar" data-name="Icon feather-calendar" transform="translate(-3.5 -2)">
+              <path id="Path_71" data-name="Path 71" d="M6.11,6H17.378a1.61,1.61,0,0,1,1.61,1.61V18.878a1.61,1.61,0,0,1-1.61,1.61H6.11a1.61,1.61,0,0,1-1.61-1.61V7.61A1.61,1.61,0,0,1,6.11,6Z" transform="translate(0 -1.39)" fill="none" stroke="#8385a1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+              <path id="Path_72" data-name="Path 72" d="M24,3V6.22" transform="translate(-9.037)" fill="none" stroke="#8385a1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+              <path id="Path_73" data-name="Path 73" d="M12,3V6.22" transform="translate(-3.476)" fill="none" stroke="#8385a1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+              <path id="Path_74" data-name="Path 74" d="M4.5,15H18.988" transform="translate(0 -5.561)" fill="none" stroke="#8385a1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+            </g>
+          </svg>          
+          <h3 class="heading-3">Today</h3>
+        </li>
+        <li>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16.689" height="15.969" viewBox="0 0 16.689 15.969">
+            <path id="Icon_feather-star" data-name="Icon feather-star" d="M10.344,3l2.269,4.6,5.075.742-3.672,3.577.867,5.053-4.539-2.387L5.806,16.969l.867-5.053L3,8.339,8.075,7.6Z" transform="translate(-2 -2)" fill="none" stroke="#8385a1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          </svg>
+          <h3 class="heading-3">Important</h3>
+        </li>
+        <li>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16.634" height="16.634" viewBox="0 0 16.634 16.634">
+            <g id="Icon_feather-clock" data-name="Icon feather-clock" transform="translate(-2 -2)">
+              <path id="Path_30" data-name="Path 30" d="M17.634,10.317A7.317,7.317,0,1,1,10.317,3,7.317,7.317,0,0,1,17.634,10.317Z" fill="none" stroke="#8385a1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+              <path id="Path_31" data-name="Path 31" d="M18,9v4.39l2.927,1.463" transform="translate(-7.683 -3.073)" fill="none" stroke="#8385a1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+            </g>
+          </svg>          
+          <h3 class="heading-3">Scheduled</h3>
+        </li>
+        <li>
+          <svg xmlns="http://www.w3.org/2000/svg" width="15.256" height="10.958" viewBox="0 0 15.256 10.958">
+            <path id="Icon_feather-check" data-name="Icon feather-check" d="M18.427,9,9.884,17.544,6,13.66" transform="translate(-4.586 -7.586)" fill="none" stroke="#8385a1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          </svg>                  
+          <h3 class="heading-3">Done</h3>
+        </li>
+      </nav>
+      <nav class="cnav">
+        <div class="cnav__head">                 
+          <h3 class="heading-4">FOLDERS</h3>
+        </div>
+        <ul class="cnav__list" data-category-nav-container>
+          <li class="heading-3 cnav__list__li" data-cnav>Life</li>
+          <li class="heading-3 cnav__list__li" data-cnav>Work</li>
+          <li class="heading-3 cnav__list__li" data-cnav>Finance</li>
+        </ul>
+        <form action="" class="cnav__form" data-category-nav-form>
+          <button class="btn btn--icon cnav__button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16.07" height="18.07" viewBox="0 0 18.07 18.07">
+              <path id="Icon_ionic-ios-add" data-name="Icon ionic-ios-add" d="M25.91,16.875H19.125V10.09a1.125,1.125,0,0,0-2.25,0v6.785H10.09a1.125,1.125,0,0,0,0,2.25h6.785V25.91a1.125,1.125,0,0,0,2.25,0V19.125H25.91a1.125,1.125,0,0,0,0-2.25Z" transform="translate(-8.965 -8.965)" fill="#484df9"/>
+            </svg>
+          </button>  
+          <input type="text" placeholder="Create Folder" class="heading-3" data-category-nav-input>
+        </form>
+      </nav>
+      <button class="btn btn--primary quick-add-btn" data-quick-add>
+        <svg xmlns="http://www.w3.org/2000/svg" width="41" height="41" viewBox="0 0 41 41">
+        <g id="Group_22" data-name="Group 22" transform="translate(-115 -943)">
+          <rect id="Rectangle_13" data-name="Rectangle 13" width="41" height="41" rx="20.5" transform="translate(115 943)" fill="#fff"/>
+          <path id="Icon_ionic-ios-add" data-name="Icon ionic-ios-add" d="M25.91,16.875H19.125V10.09a1.125,1.125,0,0,0-2.25,0v6.785H10.09a1.125,1.125,0,0,0,0,2.25h6.785V25.91a1.125,1.125,0,0,0,2.25,0V19.125H25.91a1.125,1.125,0,0,0,0-2.25Z" transform="translate(118 946)" fill="#484df9"/>
+        </g>
+        </svg>
+      Quick Add</button>
+    </aside>
+    <main>
+      <div class="left">
+        <div class="search">
+          <button class="btn btn--icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="19.649" height="19.649" viewBox="0 0 19.649 19.649">
+              <g id="Icon_feather-search" data-name="Icon feather-search" transform="translate(1 1)">
+                <path id="Path_60" data-name="Path 60" d="M19.82,12.16A7.66,7.66,0,1,1,12.16,4.5,7.66,7.66,0,0,1,19.82,12.16Z" transform="translate(-4.5 -4.5)" fill="none" stroke="#484DF9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                <path id="Path_61" data-name="Path 61" d="M29.14,29.14l-4.165-4.165" transform="translate(-11.905 -11.905)" fill="none" stroke="#484DF9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+              </g>
+            </svg>
+          </button>
+          <input type="text" placeholder="Search e.g. Lists, Tasks" class="heading-3">
+          <button class="btn btn--icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 18.25 18.25">
+              <path id="Icon_ionic-md-close" data-name="Icon ionic-md-close" d="M25.774,9.348,23.949,7.523l-7.3,7.3-7.3-7.3L7.523,9.348l7.3,7.3-7.3,7.3,1.825,1.825,7.3-7.3,7.3,7.3,1.825-1.825-7.3-7.3Z" transform="translate(-7.523 -7.523)" fill="#8385a1"/>
+            </svg>
+          </button>
+        </div>
+        <div class="category__container" data-category-container>
+          <div class="category" data-category>
+            <div class="category__head">
+              <div class="category__title">
+                <h1 class="heading-1">Work</h1>
+                <span class="heading-3">14</span>
+              </div>
+              <div class="category__nav">
+                <ul>
+                  <li class="heading-3"><span class="heading-4">10</span>Lists</li>
+                  <li class="heading-3"><span class="heading-4">2</span>Notes</li>
+                  <li class="heading-3"><span class="heading-4">2</span>Files</li>
+                  <div></div>
+                </ul>
+                <div class="category__nav__controls">
+                  <button class="btn btn--icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24.012" height="16.477" viewBox="0 0 24.012 16.477">
+                      <g id="Group_55" data-name="Group 55" transform="translate(-1055.489 -184)">
+                        <path id="Icon_ionic-ios-arrow-round-up" data-name="Icon ionic-ios-arrow-round-up" d="M22.026,13.851a.748.748,0,0,1-1.053.006l-3.485-3.474V23.621a.744.744,0,0,1-1.488,0V10.383l-3.485,3.48a.753.753,0,0,1-1.053-.006.741.741,0,0,1,.006-1.047l4.75-4.716h0a.835.835,0,0,1,.235-.155.71.71,0,0,1,.286-.057.746.746,0,0,1,.521.212l4.75,4.716A.729.729,0,0,1,22.026,13.851Z" transform="translate(1057.264 176.118)" fill="#8385A1"/>
+                        <path id="Icon_ionic-ios-arrow-round-up-2" data-name="Icon ionic-ios-arrow-round-up" d="M10.779,5.969a.748.748,0,0,1-1.053.006L6.24,2.5V15.738a.744.744,0,0,1-1.488,0V2.5L1.267,5.981A.753.753,0,0,1,.214,5.975.741.741,0,0,1,.22,4.928L4.97.212h0A.835.835,0,0,1,5.2.057.71.71,0,0,1,5.491,0a.746.746,0,0,1,.521.212l4.75,4.716A.729.729,0,0,1,10.779,5.969Z" transform="translate(1066.478 200.477) rotate(180)" fill="#8385A1"/>
+                      </g>
+                    </svg>
+                  </button>
+                  <button class="btn btn--icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="4" viewBox="0 0 22 4">
+                      <g id="Group_5" data-name="Group 5" transform="translate(212 -1024) rotate(90)">
+                        <circle id="Ellipse_3" data-name="Ellipse 3" cx="2" cy="2" r="2" transform="translate(1024 208)" fill="#8385A1"/>
+                        <circle id="Ellipse_17" data-name="Ellipse 17" cx="2" cy="2" r="2" transform="translate(1024 199)" fill="#8385A1"/>
+                        <circle id="Ellipse_18" data-name="Ellipse 18" cx="2" cy="2" r="2" transform="translate(1024 190)" fill="#8385A1"/>
+                      </g>
+                    </svg>                
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="category__content">
+              <form action="" class="category__form" data-list-form>
+                <button class="btn btn--icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="41" height="41" viewBox="0 0 41 41">
+                    <g id="Group_22" data-name="Group 22" transform="translate(-115 -943)">
+                      <rect id="Rectangle_13" data-name="Rectangle 13" width="41" height="41" rx="20.5" transform="translate(115 943)" fill="none"/>
+                      <path id="Icon_ionic-ios-add" data-name="Icon ionic-ios-add" d="M25.91,16.875H19.125V10.09a1.125,1.125,0,0,0-2.25,0v6.785H10.09a1.125,1.125,0,0,0,0,2.25h6.785V25.91a1.125,1.125,0,0,0,2.25,0V19.125H25.91a1.125,1.125,0,0,0,0-2.25Z" transform="translate(118 946)" fill="#484df9"/>
+                    </g>
+                    </svg>
+                </button>  
+                <input type="text" placeholder="Add a new list" class="heading-3" data-list-input>
+              </form>
+              <div class="list" data-list-container></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="right">
+        <div class="task__container">
+        </div>
+        <div class="calendar">
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="js/app.js"></script>
+</body>
+</html>
